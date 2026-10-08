@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-4)"/>
+  <!-- Pit Navigation Topology -->
+  <g stroke="#4338ca" stroke-width="2" fill="none" opacity="0.4">
+    <ellipse cx="400" cy="240" rx="320" ry="140"/>
+    <ellipse cx="400" cy="240" rx="240" ry="100"/>
+    <ellipse cx="400" cy="240" rx="150" ry="60"/>
+    <line x1="80" y1="240" x2="720" y2="240" stroke-dasharray="4,4"/>
+  </g>
+  <!-- Haul Truck Vector Silhouette -->
+  <g transform="translate(280, 140)">
+    <!-- Dump Bed -->
+    <path d="M 20,40 L 150,40 L 180,90 L 40,90 Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="3"/>
+    <!-- Cab -->
+    <path d="M 185,55 L 220,55 L 235,90 L 185,90 Z" fill="#38bdf8" stroke="#7dd3fc" stroke-width="2"/>
+    <!-- Chassis & Huge Wheels -->
+    <rect x="30" y="85" width="200" height="15" fill="#334155"/>
+    <circle cx="70" cy="115" r="32" fill="#0f172a" stroke="#64748b" stroke-width="8"/>
+    <circle cx="70" cy="115" r="12" fill="#e2e8f0"/>
+    <circle cx="190" cy="115" r="32" fill="#0f172a" stroke="#64748b" stroke-width="8"/>
+    <circle cx="190" cy="115" r="12" fill="#e2e8f0"/>
+    <!-- GPS Telemetry Beacon -->
+    <circle cx="210" cy="40" r="6" fill="#10b981"/>
+    <path d="M 200,30 Q 210,20 220,30" stroke="#10b981" stroke-width="2" fill="none"/>
+    <path d="M 195,22 Q 210,10 225,22" stroke="#10b981" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Telemetry Metrics Bar -->
+  <g transform="translate(220, 340)">
+    <rect x="0" y="0" width="360" height="40" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="25" y="25" fill="#a5b4fc" font-family="sans-serif" font-size="12">SPEED: <tspan fill="#ffffff" font-weight="700">28 km/h</tspan></text>
+    <text x="140" y="25" fill="#a5b4fc" font-family="sans-serif" font-size="12">FUEL: <tspan fill="#ffffff" font-weight="700">42 L/h</tspan></text>
+    <text x="250" y="25" fill="#a5b4fc" font-family="sans-serif" font-size="12">CYCLE: <tspan fill="#10b981" font-weight="700">14.2 min</tspan></text>
+  </g>
+  <!-- Badge -->
+  <rect x="50" y="40" width="160" height="28" rx="14" fill="#312e81" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="66" cy="54" r="5" fill="#818cf8"/>
+  <text x="80" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="600">FLEET TELEMETRY</text>
+</svg>

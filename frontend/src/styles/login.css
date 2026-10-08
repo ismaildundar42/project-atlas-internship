@@ -1,0 +1,575 @@
+/* ==========================================================================
+   Demir Export Proje Kütüphanesi — Phase 8.1 Corporate Login Redesign
+   Industrial, Technological, Institutional & Art-Directed Design System
+   ========================================================================== */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #060e18; /* Deepest Navy Base */
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* ─── Main Container Layout ───────────────────────────────────────────────── */
+.login-page__container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ─── Left Brand Experience Zone (approx 62%) ────────────────────────────── */
+.login-page__brand-zone {
+  flex: 1.5;
+  background-color: #0b1728; /* Corporate Deep Blue */
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(197, 22, 5, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.25) 0%, transparent 50%);
+  color: #ffffff;
+  padding: var(--space-10) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Precise Industrial Grid Background Overlay */
+.login-page__brand-zone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Brand Header: Large Prominent Demir Export Logo */
+.login-page__brand-header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-page__de-logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.login-page__de-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.login-page__sys-code {
+  font-family: var(--font-mono, monospace);
+  font-size: var(--font-size-xs);
+  color: #475569;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* Brand Main Content Area */
+.login-page__brand-content {
+  position: relative;
+  z-index: 3;
+  max-width: 640px;
+  margin: var(--space-8) 0;
+}
+
+.login-page__product-lockup {
+  margin-bottom: var(--space-6);
+}
+
+.login-page__product-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ff5240;
+  margin-bottom: var(--space-3);
+}
+
+.login-page__product-eyebrow-line {
+  width: 24px;
+  height: 2px;
+  background-color: #c51605;
+}
+
+.login-page__product-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.login-page__product-title-highlight {
+  color: #f8fafc;
+  display: block;
+}
+
+.login-page__product-subtitle {
+  font-size: var(--font-size-lg);
+  color: #94a3b8;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Product Value Statement */
+.login-page__statement {
+  margin-top: var(--space-6);
+  padding-left: var(--space-4);
+  border-left: 3px solid #c51605;
+}
+
+.login-page__statement-text {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: var(--space-1);
+}
+
+.login-page__statement-subtext {
+  font-size: var(--font-size-xs);
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Custom Project Intelligence Network SVG Graphics ───────────────────── */
+.login-page__network-graphic {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+/* Brand Footer: Koç Affiliation Strip */
+.login-page__brand-footer {
+  position: relative;
+  z-index: 3;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-page__koc-affiliation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.login-page__koc-text {
+  font-size: var(--font-size-xs);
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.login-page__koc-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.login-page__copyright {
+  font-size: var(--font-size-xs);
+  color: #475569;
+}
+
+/* ─── Right Authentication Zone (approx 38%) ────────────────────────────── */
+.login-page__auth-zone {
+  flex: 1;
+  background-color: #0f172a; /* Sleek Deep Slate Navy */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-10);
+  position: relative;
+}
+
+.login-page__auth-container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-page__auth-card {
+  background-color: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.login-page__auth-header {
+  margin-bottom: var(--space-6);
+}
+
+.login-page__auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+}
+
+.login-page__auth-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.login-page__auth-desc {
+  font-size: var(--font-size-sm);
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.login-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.login-page__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-page__label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.02em;
+}
+
+.login-page__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-page__input-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  pointer-events: none;
+  transition: color var(--transition-fast);
+}
+
+.login-page__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px 0 44px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background-color: #0b132b;
+  color: #ffffff;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.login-page__input::placeholder {
+  color: #475569;
+}
+
+.login-page__input:focus {
+  outline: none;
+  border-color: #c51605;
+  box-shadow: 0 0 0 3px rgba(197, 22, 5, 0.25);
+  background-color: #0d1735;
+}
+
+.login-page__input:focus + .login-page__input-icon,
+.login-page__input-wrapper:focus-within .login-page__input-icon {
+  color: #ff5240;
+}
+
+.login-page__password-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.login-page__password-toggle:hover {
+  color: #ffffff;
+}
+
+.login-page__password-toggle:focus-visible {
+  outline: 2px solid #c51605;
+}
+
+/* ─── First-Party CAPTCHA Challenge Integration ─────────────────────────── */
+.login-page__captcha-group {
+  margin-top: var(--space-1);
+}
+
+.login-page__captcha-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.login-page__captcha-input-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.login-page__captcha-input {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: var(--font-size-base);
+}
+
+.login-page__captcha-input::placeholder {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: #475569;
+}
+
+.login-page__captcha-preview-wrap {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  background-color: #0b132b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.login-page__captcha-preview-wrap:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.login-page__captcha-img {
+  height: 48px;
+  width: 140px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.login-page__captcha-skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 130px;
+  height: 48px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.login-page__captcha-error-retry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: #f87171;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color var(--transition-fast);
+}
+
+.login-page__captcha-error-retry:hover {
+  color: #fca5a5;
+}
+
+.login-page__captcha-refresh-btn {
+  width: 38px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.login-page__captcha-refresh-btn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.login-page__captcha-refresh-btn:focus-visible {
+  outline: 2px solid #c51605;
+}
+
+.login-page__captcha-refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-page__spin {
+  animation: login-spin 1s linear infinite;
+}
+
+@keyframes login-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-page__error-alert {
+  padding: 12px 16px;
+  background-color: rgba(225, 29, 72, 0.15);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  border-radius: var(--radius-md);
+  color: #fecdd3;
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.login-page__submit-btn {
+  margin-top: var(--space-2);
+  width: 100%;
+  height: 48px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background-color: #c51605;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.login-page__submit-btn:hover:not(:disabled) {
+  background-color: #a31204;
+}
+
+.login-page__submit-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.login-page__back-link {
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+.login-page__back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: var(--font-size-xs);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.login-page__back-button:hover {
+  color: #ffffff;
+}
+
+/* ─── Mobile Responsive Breakpoints (< 960px) ───────────────────────────── */
+@media (max-width: 960px) {
+  .login-page__container {
+    flex-direction: column;
+  }
+
+  .login-page__brand-zone {
+    flex: none;
+    padding: var(--space-6) var(--space-6);
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .login-page__network-graphic {
+    display: none; /* Hide heavy SVG graphic on mobile viewport */
+  }
+
+  .login-page__product-title {
+    font-size: 2.2rem;
+  }
+
+  .login-page__brand-content {
+    margin: var(--space-4) 0;
+  }
+
+  .login-page__auth-zone {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .login-page__auth-card {
+    padding: var(--space-6) var(--space-4);
+  }
+}

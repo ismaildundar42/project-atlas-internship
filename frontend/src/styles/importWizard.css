@@ -1,0 +1,508 @@
+/* =============================================================================
+   Excel Import Wizard Styles — Demir Export Proje Kütüphanesi
+   ============================================================================= */
+
+.import-wizard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Stepper ───────────────────────────────────────────────────────────────── */
+
+.import-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.import-step-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  position: relative;
+  flex: 1;
+}
+
+.import-step-item:not(:last-child)::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border);
+  margin: 0 var(--space-4);
+  transition: background-color var(--transition-normal);
+}
+
+.import-step-item--completed:not(:last-child)::after {
+  background-color: var(--color-success);
+}
+
+.import-step-item--active:not(:last-child)::after {
+  background-color: var(--color-brand-navy);
+}
+
+.import-step-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+  background-color: var(--color-surface-subtle);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.import-step-item--active .import-step-bubble {
+  background-color: var(--color-brand-navy);
+  border-color: var(--color-brand-navy);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(15, 39, 68, 0.15);
+}
+
+.import-step-item--completed .import-step-bubble {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: #ffffff;
+}
+
+.import-step-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.import-step-label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.import-step-title {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.import-step-item--active .import-step-title {
+  color: var(--color-text-primary);
+}
+
+.import-step-item--completed .import-step-title {
+  color: var(--color-text-primary);
+}
+
+/* ─── Step 1: File Upload & Template ────────────────────────────────────────── */
+
+.import-template-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background-color: var(--color-info-bg);
+  border: 1px solid var(--color-info-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.import-template-info {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.import-template-icon {
+  color: var(--color-info);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.import-template-title {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.import-template-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-snug);
+  margin: 0;
+}
+
+.import-dropzone {
+  border: 2px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  background-color: var(--color-surface-subtle);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.import-dropzone:hover,
+.import-dropzone--drag-over {
+  border-color: var(--color-brand-navy);
+  background-color: rgba(15, 39, 68, 0.04);
+}
+
+.import-dropzone:focus-visible {
+  outline: 2px solid var(--color-brand-navy);
+  outline-offset: 2px;
+}
+
+.import-dropzone-icon {
+  color: var(--color-brand-navy);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(15, 39, 68, 0.08);
+  border-radius: var(--radius-full);
+}
+
+.import-dropzone-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.import-dropzone-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.import-selected-file-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+}
+
+.import-selected-file-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.import-selected-file-name {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.import-selected-file-size {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ─── Sheet Selector & Inspection Info ──────────────────────────────────────── */
+
+.import-sheet-selector-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+}
+
+.import-sheet-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.import-sheet-select {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  min-width: 200px;
+}
+
+/* ─── Step 2: Mapping Table ─────────────────────────────────────────────────── */
+
+.import-mapping-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.import-mapping-counters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.import-mapping-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.import-mapping-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.import-mapping-table th {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.import-mapping-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.import-mapping-table tr:hover td {
+  background-color: rgba(15, 39, 68, 0.02);
+}
+
+.import-field-select {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 12px;
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.import-field-select:focus {
+  outline: none;
+  border-color: var(--color-brand-navy);
+  box-shadow: 0 0 0 2px rgba(15, 39, 68, 0.15);
+}
+
+/* ─── Step 3: Validation & Preview ──────────────────────────────────────────── */
+
+.import-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.import-metric-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.import-metric-card--success {
+  border-color: var(--color-success-border);
+  background-color: var(--color-success-bg);
+}
+
+.import-metric-card--danger {
+  border-color: var(--color-danger-border);
+  background-color: var(--color-danger-bg);
+}
+
+.import-metric-card--warning {
+  border-color: var(--color-warning-border);
+  background-color: var(--color-warning-bg);
+}
+
+.import-metric-title {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.import-metric-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.import-status-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
+.import-status-banner--success {
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: #14532d;
+}
+
+.import-status-banner--danger {
+  background-color: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  color: #7f1d1d;
+}
+
+.import-status-banner--warning {
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  color: #78350f;
+}
+
+.import-issues-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  margin-bottom: var(--space-6);
+  max-height: 400px;
+}
+
+.import-preview-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.import-preview-row--invalid {
+  background-color: rgba(220, 38, 38, 0.04);
+}
+
+.import-preview-row--invalid td:first-child {
+  border-left: 3px solid var(--color-danger);
+}
+
+/* ─── Step 4: Success ───────────────────────────────────────────────────────── */
+
+.import-success-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  gap: var(--space-4);
+}
+
+.import-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  border: 2px solid var(--color-success-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.import-success-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.import-success-desc {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  line-height: var(--line-height-normal);
+}
+
+.import-success-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* ─── Wizard Footer Controls ────────────────────────────────────────────────── */
+
+.import-wizard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-4);
+}
+
+/* ─── Responsive Adjustments ────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .import-stepper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .import-step-item {
+    width: 100%;
+  }
+
+  .import-step-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .import-template-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .import-wizard-footer {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: stretch;
+  }
+}

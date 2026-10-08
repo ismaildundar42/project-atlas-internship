@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="50%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-17)"/>
+  <!-- Oil Drop & Spectral Element Breakdown -->
+  <g transform="translate(180, 90)">
+    <!-- Oil Droplet -->
+    <path d="M 120,40 C 120,40 60,130 60,170 C 60,205 85,230 120,230 C 155,230 180,205 180,170 C 180,130 120,40 120,40 Z" fill="#d97706" stroke="#fbbf24" stroke-width="4"/>
+    <!-- Elemental Wear Bars on right -->
+    <g transform="translate(230, 40)">
+      <!-- Fe (Iron) -->
+      <text x="0" y="25" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700">Fe (Iron)</text>
+      <rect x="75" y="12" width="140" height="16" rx="4" fill="#334155"/>
+      <rect x="75" y="12" width="85" height="16" rx="4" fill="#3b82f6"/>
+      <!-- Cu (Copper) -->
+      <text x="0" y="65" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700">Cu (Copper)</text>
+      <rect x="75" y="52" width="140" height="16" rx="4" fill="#334155"/>
+      <rect x="75" y="52" width="45" height="16" rx="4" fill="#f59e0b"/>
+      <!-- Pb (Lead) -->
+      <text x="0" y="105" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700">Pb (Lead)</text>
+      <rect x="75" y="92" width="140" height="16" rx="4" fill="#334155"/>
+      <rect x="75" y="92" width="115" height="16" rx="4" fill="#ef4444"/>
+      <!-- Si (Silicon) -->
+      <text x="0" y="145" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700">Si (Dust)</text>
+      <rect x="75" y="132" width="140" height="16" rx="4" fill="#334155"/>
+      <rect x="75" y="132" width="30" height="16" rx="4" fill="#10b981"/>
+    </g>
+  </g>
+  <!-- Badge -->
+  <rect x="50" y="40" width="160" height="28" rx="14" fill="#27272a" stroke="#fbbf24" stroke-width="1.5"/>
+  <circle cx="66" cy="54" r="5" fill="#fbbf24"/>
+  <text x="80" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="600">OIL SPECTROMETRY</text>
+</svg>

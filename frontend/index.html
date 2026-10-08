@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Demir Export Ar-Ge organizasyonu proje kayıt, keşif ve dokümantasyon platformu." />
+    <title>Demir Export Proje Kütüphanesi</title>
+
+    <!-- Critical Skip Navigation Protection: Prevents unstyled text flash on initial page load / hard refresh -->
+    <style>
+      .skip-link {
+        position: fixed !important;
+        top: -100px !important;
+        left: 1rem !important;
+        z-index: 9999 !important;
+      }
+      .skip-link:focus,
+      .skip-link:focus-visible {
+        top: 0 !important;
+      }
+    </style>
+    <!-- Theme Bootstrap Script: Synchronously resolves stored theme preference before HTML render to prevent FOUC / white flash -->
+    <script>
+      (function () {
+        try {
+          var key = 'project-library-theme';
+          var stored = localStorage.getItem(key);
+          var theme = (stored === 'light' || stored === 'dark' || stored === 'system') ? stored : 'system';
+          var resolved = theme;
+          if (theme === 'system') {
+            resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

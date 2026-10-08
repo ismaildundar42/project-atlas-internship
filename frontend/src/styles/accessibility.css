@@ -1,0 +1,157 @@
+/* =============================================================================
+   Accessibility Styles — Demir Export Proje Kütüphanesi
+   
+   Erişilebilirlik tercihleri data attribute'ları aracılığıyla uygulanır.
+   AccessibilityContext bu attribute'ları <html> veya <body> elementine yazar.
+   ============================================================================= */
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────────── */
+
+/* Sistem tercihi */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Uygulama içi tercih */
+[data-reduced-motion='true'] *,
+[data-reduced-motion='true'] *::before,
+[data-reduced-motion='true'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ─── Enhanced Focus Indicators ──────────────────────────────────────────── */
+
+[data-enhanced-focus='true'] :focus-visible {
+  outline-width: 3px;
+  outline-offset: 3px;
+  outline-color: var(--focus-ring-color);
+  box-shadow: 0 0 0 5px rgba(30, 74, 124, 0.25);
+}
+
+/* ─── High Contrast Mode ──────────────────────────────────────────────────── */
+/* Token overrides tokens.css içinde --color-* custom properties'lerini değiştirir. */
+/* Aşağıdakiler ek yapısal overrides'tır.                                          */
+
+[data-contrast='high'] a {
+  text-decoration: underline;
+}
+
+[data-contrast='high'] button:not(:disabled):not(.a11y-toggle):not(.a11y-font-btn):not(.icon-btn) {
+  border: 2px solid currentColor;
+}
+
+[data-contrast='high'] .a11y-toggle {
+  border: none !important;
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 1px;
+}
+
+[data-contrast='high'] .a11y-toggle--on {
+  background-color: var(--color-text-primary) !important;
+}
+
+[data-contrast='high'] .a11y-toggle--on .a11y-toggle__thumb {
+  background-color: var(--color-surface) !important;
+}
+
+[data-contrast='high'] input,
+[data-contrast='high'] select,
+[data-contrast='high'] textarea {
+  border: 2px solid var(--color-text-primary);
+}
+
+[data-contrast='high'] :focus-visible {
+  outline-width: 3px;
+  outline-color: #0000ff;
+  outline-offset: 3px;
+}
+
+/* Sidebar high contrast */
+[data-contrast='high'] .sidebar {
+  border-right: 2px solid #000000;
+}
+
+[data-contrast='high'] .sidebar-nav-item.active {
+  outline: 2px solid currentColor;
+}
+
+/* ─── Font Size Scale ────────────────────────────────────────────────────── */
+/* Font boyutu token'ları tokens.css içindeki data attribute selector'larıyla değişir. */
+/* Bileşen düzeyinde özel gerekirseler buraya eklenir.                                 */
+
+[data-font-size='large'] .sidebar-nav-label {
+  font-size: var(--font-size-md);
+}
+
+[data-font-size='xlarge'] .sidebar-nav-label {
+  font-size: var(--font-size-lg);
+}
+
+/* ─── Accessibility Panel ────────────────────────────────────────────────── */
+
+.a11y-panel {
+  position: fixed;
+  top: var(--header-height);
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  height: calc(100dvh - var(--header-height));
+  background-color: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-panel);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  overflow-y: auto;
+}
+
+.a11y-panel.open {
+  transform: translateX(0);
+}
+
+[data-reduced-motion='true'] .a11y-panel {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .a11y-panel {
+    transition: none;
+  }
+}
+
+/* ─── Backdrop (Mobile Drawer & Panels) ────────────────────────────────── */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: var(--z-drawer);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+[data-reduced-motion='true'] .backdrop {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop {
+    transition: none;
+  }
+}

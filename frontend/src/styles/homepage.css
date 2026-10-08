@@ -1,0 +1,213 @@
+/* =============================================================================
+   HomePage & NotFoundPage Styles
+   ============================================================================= */
+
+/* ─── Page Container ────────────────────────────────────────────────────────── */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background:
+    radial-gradient(ellipse at 20% 40%, rgba(13, 33, 55, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 60%, rgba(192, 57, 43, 0.04) 0%, transparent 60%),
+    var(--color-surface);
+}
+
+/* ─── Card ──────────────────────────────────────────────────────────────────── */
+.home-card {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: cardEntrance var(--transition-slow) ease-out both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Logo ──────────────────────────────────────────────────────────────────── */
+.home-logo {
+  margin-bottom: var(--spacing-lg);
+}
+
+.logo-icon {
+  font-size: 3rem;
+  color: var(--color-navy);
+  display: inline-block;
+  animation: logoRotate 8s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes logoRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────────── */
+.home-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: -0.025em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.home-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ─── Foundation Badge ──────────────────────────────────────────────────────── */
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(13, 33, 55, 0.06);
+  border: 1px solid rgba(13, 33, 55, 0.12);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-navy);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-success);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* ─── Divider ───────────────────────────────────────────────────────────────── */
+.home-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+  margin: var(--spacing-lg) 0;
+}
+
+/* ─── Health Section ────────────────────────────────────────────────────────── */
+.health-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.health-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.health-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.health-status.ok {
+  background: rgba(39, 174, 96, 0.08);
+  border: 1px solid rgba(39, 174, 96, 0.2);
+  color: #1a7a40;
+}
+
+.health-status.error {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  color: var(--color-red);
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.health-status.loading {
+  background: rgba(13, 33, 55, 0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ok-dot {
+  background: var(--color-success);
+  box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.25);
+}
+
+.error-dot {
+  background: var(--color-error);
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.25);
+}
+
+.loading-dot {
+  background: var(--color-text-muted);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.health-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* ─── Stack Tags ────────────────────────────────────────────────────────────── */
+.home-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.stack-item {
+  font-weight: 500;
+}
+
+.stack-separator {
+  color: var(--color-border);
+  user-select: none;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .home-card {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .home-title {
+    font-size: var(--font-size-xl);
+  }
+}

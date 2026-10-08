@@ -1,0 +1,8 @@
+namespace DeUygulamaVitrini.Application.DTOs.Lookups;
+
+public class TechnologyDto
+{
+    public int Id { get; set; }
+    public required string Name { get; set; }
+    public required string Category { get; set; }
+}

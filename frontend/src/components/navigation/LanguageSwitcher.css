@@ -1,0 +1,196 @@
+/* ─── Base Language Switcher (Segmented Animated Pill Switch) ────────────────── */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: var(--font-family, inherit);
+  cursor: pointer;
+}
+
+/* Sliding Thumb Element */
+.lang-switcher__thumb {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  border-radius: 12px;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lang-switcher--tr .lang-switcher__thumb {
+  transform: translateX(0);
+}
+
+.lang-switcher--en .lang-switcher__thumb {
+  transform: translateX(100%);
+}
+
+.lang-switcher__btn {
+  position: relative;
+  z-index: 2;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1.2;
+  text-align: center;
+  transition: color 0.18s ease;
+}
+
+/* ─── Header Variant (Desktop TopHeader: Dark Navy header) ──────────────────── */
+.lang-switcher--header {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 2px;
+  height: 28px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-switcher--header:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.lang-switcher--header .lang-switcher__thumb {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.lang-switcher--header .lang-switcher__btn {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 12px;
+  min-width: 26px;
+}
+
+.lang-switcher--header .lang-switcher__btn:hover {
+  color: #ffffff;
+}
+
+.lang-switcher--header .lang-switcher__btn--active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.lang-switcher--header .lang-switcher__btn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 1px;
+}
+
+/* ─── Compact / Segmented Variant (LoginPage, Modals) ────────────────────────── */
+.lang-switcher--compact,
+.lang-switcher--segmented {
+  background: var(--color-surface-elevated, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 16px;
+  padding: 2px;
+  height: 26px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+:root[data-theme='dark'] .lang-switcher--compact,
+:root[data-theme='dark'] .lang-switcher--segmented {
+  background: var(--color-surface-elevated, #1e293b);
+  border-color: var(--color-border, #334155);
+}
+
+.lang-switcher--compact .lang-switcher__thumb,
+.lang-switcher--segmented .lang-switcher__thumb {
+  background: var(--color-primary-subtle, #eff6ff);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme='dark'] .lang-switcher--compact .lang-switcher__thumb,
+:root[data-theme='dark'] .lang-switcher--segmented .lang-switcher__thumb {
+  background: var(--color-primary-subtle, rgba(2, 132, 199, 0.25));
+}
+
+.lang-switcher--compact .lang-switcher__btn,
+.lang-switcher--segmented .lang-switcher__btn {
+  color: var(--color-text-secondary, #64748b);
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  min-width: 24px;
+}
+
+.lang-switcher--compact .lang-switcher__btn:hover,
+.lang-switcher--segmented .lang-switcher__btn:hover {
+  color: var(--color-text-primary, #0f172a);
+}
+
+:root[data-theme='dark'] .lang-switcher--compact .lang-switcher__btn:hover,
+:root[data-theme='dark'] .lang-switcher--segmented .lang-switcher__btn:hover {
+  color: var(--color-text-primary, #f8fafc);
+}
+
+.lang-switcher--compact .lang-switcher__btn--active,
+.lang-switcher--segmented .lang-switcher__btn--active {
+  color: var(--color-primary, #0284c7);
+  font-weight: 700;
+}
+
+:root[data-theme='dark'] .lang-switcher--compact .lang-switcher__btn--active,
+:root[data-theme='dark'] .lang-switcher--segmented .lang-switcher__btn--active {
+  color: #38bdf8;
+}
+
+.lang-switcher--compact .lang-switcher__btn:focus-visible,
+.lang-switcher--segmented .lang-switcher__btn:focus-visible {
+  outline: 2px solid var(--color-primary, #0284c7);
+  outline-offset: 1px;
+}
+
+/* ─── Drawer Variant (Mobile Navigation Drawer) ────────────────────────────── */
+.lang-switcher--drawer {
+  background: var(--color-surface-elevated, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 18px;
+  padding: 3px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+:root[data-theme='dark'] .lang-switcher--drawer {
+  background: var(--color-surface-elevated, #1e293b);
+  border-color: var(--color-border, #334155);
+}
+
+.lang-switcher--drawer .lang-switcher__thumb {
+  background: var(--color-primary-subtle, #eff6ff);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+}
+
+:root[data-theme='dark'] .lang-switcher--drawer .lang-switcher__thumb {
+  background: var(--color-primary-subtle, rgba(2, 132, 199, 0.25));
+}
+
+.lang-switcher--drawer .lang-switcher__btn {
+  color: var(--color-text-secondary, #64748b);
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  min-width: 32px;
+}
+
+.lang-switcher--drawer .lang-switcher__btn--active {
+  color: var(--color-primary, #0284c7);
+  font-weight: 700;
+}
+
+:root[data-theme='dark'] .lang-switcher--drawer .lang-switcher__btn--active {
+  color: #38bdf8;
+}

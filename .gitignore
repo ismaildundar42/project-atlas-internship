@@ -1,0 +1,210 @@
+# =============================================================================
+# Demir Export Proje Kütüphanesi — .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Environment & Secrets (CRITICAL — never commit)
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+*.env
+
+# Keep example files (safe templates, no real secrets)
+!.env.example
+!**/.env.example
+
+# -----------------------------------------------------------------------------
+# Node / npm / Frontend
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite / Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Dependency lock (keep package-lock.json, ignore yarn.lock / pnpm-lock if not using)
+# package-lock.json  # keep this
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# -----------------------------------------------------------------------------
+# .NET / ASP.NET Core / C#
+# -----------------------------------------------------------------------------
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio / Rider
+.vs/
+.vscode/settings.json
+.idea/
+*.suo
+*.ncrunch*
+*.DotSettings.user
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Entity Framework Core — DO NOT commit migrations to ignore; migrations are source-controlled
+# Uncomment below only if you intentionally want to exclude them (NOT recommended)
+# **/Migrations/
+
+# ASP.NET Core DataProtection keys
+DataProtection-Keys/
+
+# -----------------------------------------------------------------------------
+# Database
+# -----------------------------------------------------------------------------
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.bacpac
+
+# SQLite (if ever used for local dev)
+*.db
+*.sqlite
+*.sqlite3
+
+# -----------------------------------------------------------------------------
+# Operating System
+# -----------------------------------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux
+*~
+
+# -----------------------------------------------------------------------------
+# IDEs & Editors
+# -----------------------------------------------------------------------------
+
+# Visual Studio Code (keep shared workspace settings, ignore personal ones)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Visual Studio
+*.VC.db
+*.VC.opendb
+.localhistory/
+
+# JetBrains Rider / ReSharper
+_ReSharper*/
+*.ReSharper
+.idea/
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# -----------------------------------------------------------------------------
+# Logs & Diagnostics
+# -----------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Test coverage & reports
+# -----------------------------------------------------------------------------
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+# Local AI Agent Skills
+/.agents/skills/
+
+# -----------------------------------------------------------------------------
+# ProjectAtlas Security & Private Document Storage (SEC-001)
+# -----------------------------------------------------------------------------
+backend/**/App_Data/uploads/projects/
+backend/**/App_Data/uploads/docs/*.pdf
+!backend/**/App_Data/uploads/docs/sample-project-specification.pdf
+cookies.txt
+*.xlsx
+benchmark_*.json
+test_*.ps1
+verify_*.ps1

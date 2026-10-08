@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="50%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-6)"/>
+  <!-- Piezometer Well & Water Table -->
+  <g transform="translate(180, 80)">
+    <!-- Soil strata -->
+    <rect x="0" y="80" width="440" height="220" fill="#1e293b" opacity="0.6"/>
+    <!-- Water Table Layer -->
+    <path d="M 0,180 Q 110,165 220,180 T 440,175 L 440,300 L 0,300 Z" fill="#0284c7" opacity="0.5"/>
+    <!-- Well Casing Column -->
+    <rect x="190" y="20" width="60" height="260" fill="#0f172a" stroke="#38bdf8" stroke-width="3" rx="4"/>
+    <!-- Solar Panel & LoRaWAN Node on top -->
+    <polygon points="170,20 270,20 250,5 190,5" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="220" y1="5" x2="220" y2="-20" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="220" cy="-20" r="4" fill="#38bdf8"/>
+    <!-- Radio Waves -->
+    <path d="M 205,-30 Q 220,-40 235,-30" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <path d="M 195,-38 Q 220,-52 245,-38" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <!-- Sensor Cable & Probe -->
+    <line x1="220" y1="20" x2="220" y2="230" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+    <rect x="210" y="230" width="20" height="35" rx="4" fill="#f59e0b"/>
+  </g>
+  <!-- Badge -->
+  <rect x="50" y="40" width="160" height="28" rx="14" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="66" cy="54" r="5" fill="#38bdf8"/>
+  <text x="80" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="600">HYDRO TELEMETRY</text>
+</svg>
