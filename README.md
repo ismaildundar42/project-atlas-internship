@@ -20,7 +20,17 @@
 
 <br />
 
+<!-- ========================================== -->
+<!-- 🌟 [ANA VİTRİN HERO GÖRSELİ] -->
+<!-- Ekran görüntüsünü alıp 'docs/screenshots/01-homepage-showcase.png' olarak kaydedin -->
+<!-- ========================================== -->
+<img src="docs/screenshots/01-homepage-showcase.png" alt="ProjectAtlas Ana Vitrin & Proje Keşif Ekranı" width="100%" style="border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.7);" />
+
+<br />
+<br />
+
 [✨ Neden ProjectAtlas?](#-neden-projectatlas) •
+[📸 Görsel Vitrin](#-ekran-görüntüleri-ve-görsel-vitrin) •
 [🎯 Öne Çıkan Özellikler](#-öne-çıkan-özellikler) •
 [🏛️ Sistem Mimarisi](#-sistem-mimarisi-clean-architecture--ddd) •
 [🧠 Yerel RAG & AI Hattı](#-yerel-yapay-zekâ--semantik-rag-hattı) •
@@ -50,6 +60,90 @@ Büyük ölçekli endüstriyel kuruluşlarda (Madencilik, IoT, Ağır Sanayi, Te
 - **Mükerrer Yatırımları Önleme:** Şirket genelindeki benzer saha çözümlerini teknoloji ve mimari etiketleriyle anında görünür kılar.
 - **Yapay Zekâ ile Anında Erişim:** %100 yerel çalışan **BGE-M3 + Qwen 3 RAG** motoruyla yüzlerce sayfalık teknik dokümanları saniyeler içinde doğal dille özetler ve kaynak referanslarıyla yanıtlar.
 - **Sıkı Kurumsal Yönetişim:** Modül bazlı onay iş akışları, SEC-001 izole streaming ve tam denetim izi (audit log) sunar.
+
+---
+
+## 📸 Ekran Görüntüleri ve Görsel Vitrin
+
+> 💡 *Aşağıdaki bölümlere tarayıcınızdan alacağınız ekran görüntülerini ilgili dosya adıyla `docs/screenshots/` dizinine eklediğinizde GitHub üzerinde otomatik ve modern çerçeveli olarak görüntülenecektir.*
+
+---
+
+### 🖥️ 1. Ana Sayfa & Proje Keşif Vitrini (Dashboard & Showcase)
+> *Modern kart tasarımları, çok boyutlu filtreleme çubuğu, global arama ve istatistik özet şeridi.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/01-homepage-showcase.png] -->
+  <!-- Tarayıcıda http://localhost:5173 ana sayfasının ekran görüntüsünü alıp bu isimle kaydedin -->
+  <img src="docs/screenshots/01-homepage-showcase.png" alt="ProjectAtlas Ana Sayfa & Vitrin" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
+### 🧠 2. Proje Detayı & Yerel Yapay Zekâ (RAG) Asistanı
+> *Zengin proje teknik içeriği, entegrasyon şemaları ve sağ altta açık olan yerel BGE-M3 + Qwen 3 destekli akıllı asistan sohbet penceresi.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/02-project-detail-ai.png] -->
+  <!-- Bir projenin detay sayfasını açıp sağ alttaki AI Asistan penceresiyle birlikte ekran görüntüsünü alın -->
+  <img src="docs/screenshots/02-project-detail-ai.png" alt="Proje Detay ve Yerel RAG Asistanı" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
+### ✍️ 3. Zengin Proje Editörü & Doküman Yönetimi
+> *Çok sekmeli proje oluşturma/düzenleme formu, teknoloji etiketleri, ekip üyesi bağlama ve SEC-001 güvenli dosya yükleme paneli.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/03-project-editor.png] -->
+  <!-- http://localhost:5173/admin/projects/new veya proje düzenleme ekranının görüntüsünü alın -->
+  <img src="docs/screenshots/03-project-editor.png" alt="Proje Editörü & Doküman Yönetimi" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
+### 🛡️ 4. Modül Erişim Yönetimi & Talep Onay İş Akışı
+> *Raporlar ve Ekipler modüllerine özel erişim talep listesi, yönetici onay/ret aksiyonları ve geçmişi koruyan yetki iptal paneli.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/04-module-access.png] -->
+  <!-- http://localhost:5173/admin/module-access ekranının görüntüsünü alın -->
+  <img src="docs/screenshots/04-module-access.png" alt="Modül Erişim Yönetimi ve Talep Akışı" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
+### 📊 5. İnteraktif Raporlama & Analitik Grafikler
+> *Departman bazlı bütçe dağılımları, teknoloji trendleri, tamamlanma yüzdeleri ve analitik veri görselleştirmeleri.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/05-reports-analytics.png] -->
+  <!-- http://localhost:5173/reports sayfasındaki grafiklerin görüntüsünü alın -->
+  <img src="docs/screenshots/05-reports-analytics.png" alt="Raporlama ve Analitik Grafikler" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
+### 📜 6. Sistem Denetim İzi & Güvenlik Günlükleri (Audit Logs)
+> *Sistem genelindeki tüm proje onayları, yetkilendirmeler ve veri güncellemelerini zaman damgası ve kullanıcı bilgisiyle izleyen denetim tablosu.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/06-audit-logs.png] -->
+  <!-- http://localhost:5173/admin/audit-logs sayfasının görüntüsünü alın -->
+  <img src="docs/screenshots/06-audit-logs.png" alt="Sistem Denetim Günlükleri (Audit Logs)" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
 
 ---
 
