@@ -147,6 +147,19 @@ Büyük ölçekli endüstriyel kuruluşlarda (Madencilik, IoT, Ağır Sanayi, Te
 
 ---
 
+### 🔐 7. Güvenli Kimlik Doğrulama & Birinci Taraf SVG CAPTCHA Savunması
+> *Üçüncü taraf takipçilere bağımlılığı olmayan, in-memory rate-limit korumalı görsel SVG CAPTCHA ve HTTP-Only Cookie oturum açma arayüzü.*
+
+<div align="center">
+  <!-- [BURAYA EKLENECEK: docs/screenshots/07-login-captcha.png] -->
+  <!-- http://localhost:5173/login giriş ve CAPTCHA ekranının görüntüsünü alın -->
+  <img src="docs/screenshots/07-login-captcha.png" alt="Güvenli Giriş & Birinci Taraf SVG CAPTCHA Doğrulaması" width="95%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</div>
+
+<br />
+
+---
+
 ## ✨ Öne Çıkan Özellikler
 
 | Modül / Özellik | Simge | Detaylı Açıklama |
