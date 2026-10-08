@@ -1,284 +1,310 @@
-# ğŸŒŸ ProjectAtlas â€” Kurumsal Ar-Ge Proje KÃ¼tÃ¼phanesi & AI Bilgi Havuzu
-
-[![.NET 10](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
-[![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![EF Core 10](https://img.shields.io/badge/EF%20Core-10.0-512BD4?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/ef/core/)
-[![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
-[![AI RAG](https://img.shields.io/badge/AI%20RAG-BGE--M3%20%2B%20Qwen-FF6F00?style=for-the-badge&logo=openai&logoColor=white)](https://huggingface.co/BAAI/bge-m3)
-
-> ğŸ“Œ **Staj Projesi Bilgilendirmesi:**  
-> Bu proje, **Demir Export A.Å. (KoÃ§ Holding)** bÃ¼nyesindeki YazÄ±lÄ±m MÃ¼hendisliÄŸi staj programÄ± kapsamÄ±nda geliÅŸtirilmiÅŸtir.  
-> Bu portfÃ¶y sÃ¼rÃ¼mÃ¼nde kullanÄ±lan tÃ¼m projeler, organizasyonel birimler, metrikler ve dokÃ¼manlar **%100 sentetik (mock/fictional)** verilerden oluÅŸmaktadÄ±r. Åirket iÃ§i canlÄ± sistemlere, gizli kurumsal verilere veya dÄ±ÅŸ kimlik saÄŸlayÄ±cÄ±larÄ±na eriÅŸim iÃ§ermez.
-
----
-
-## ğŸ“¸ Ekran GÃ¶rÃ¼ntÃ¼leri & GÃ¶rsel Vitrin
-
-> ğŸ’¡ *AÅŸaÄŸÄ±daki ekran gÃ¶rÃ¼ntÃ¼leri projenin gerÃ§ek Ã§alÄ±ÅŸma anÄ±ndaki arayÃ¼z bileÅŸenlerini yansÄ±tmaktadÄ±r.*
-
 <div align="center">
 
-### 1. Ana Sayfa & Proje KeÅŸif Vitrini
-![Ana Sayfa Vitrini](docs/screenshots/01-homepage-showcase.png)
-*Modern kart tasarÄ±mlarÄ±, geliÅŸmiÅŸ filtreleme, arama ve istatistik Ã¶zet Ã§ubuklarÄ±.*
+# 🌟 ProjectAtlas
+### Kurumsal Ar-Ge Proje Kütüphanesi & Yerel Yapay Zekâ (RAG) Bilgi Havuzu
 
----
+<p align="center">
+  <strong>Demir Export A.Ş. (Koç Holding) bünyesinde geliştirilmiş kurumsal proje vitrini, semantik RAG asistanı ve güvenli yönetişim platformu.</strong>
+</p>
 
-### 2. Proje DetayÄ± & Yerel Yapay Zeka (RAG) AsistanÄ±
-![Proje Detay ve Asistan](docs/screenshots/02-project-detail-ai.png)
-*KapsamlÄ± teknik/yÃ¶netsel proje detaylarÄ±, entegrasyon ÅŸemalarÄ± ve yerel Qwen/BGE-M3 destekli akÄ±llÄ± asistan widget'Ä±.*
+[![MIT License](https://img.shields.io/badge/Lisans-MIT-06b6d4?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![.NET 10.0](https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![C# 13](https://img.shields.io/badge/C%23-13.0-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+[![React 19](https://img.shields.io/badge/React-19-38bdf8?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![EF Core 10](https://img.shields.io/badge/EF%20Core-10.0-512BD4?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/ef/core/)
+[![SQL Server 2022](https://img.shields.io/badge/SQL%20Server-2022-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+[![AI RAG](https://img.shields.io/badge/Local%20AI-BGE--M3%20%2B%20Qwen-FF6F00?style=for-the-badge&logo=openai&logoColor=white)](https://huggingface.co/BAAI/bge-m3)
+[![TanStack Query](https://img.shields.io/badge/TanStack%20Query-v5-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)](https://tanstack.com/query/latest)
+[![Security Audited](https://img.shields.io/badge/Security-SEC--001%20Audited-00C853?style=for-the-badge&logo=shield&logoColor=white)](#-güvenlik-ve-yetkilendirme-mimarisi)
 
----
+<br />
 
-### 3. Zengin Proje EditÃ¶rÃ¼ & DokÃ¼man YÃ¶netimi
-![Proje EditÃ¶rÃ¼](docs/screenshots/03-project-editor.png)
-*Ã‡ok adÄ±mlÄ± form validasyonlarÄ±, kapak gÃ¶rseli seÃ§ici, ekip Ã¼yesi baÄŸlama ve gÃ¼venli dokÃ¼man yÃ¼kleme paneli.*
-
----
-
-### 4. ModÃ¼l EriÅŸim YÃ¶netimi & Talep Ä°ÅŸ AkÄ±ÅŸÄ±
-![ModÃ¼l EriÅŸim Talepleri](docs/screenshots/04-module-access-requests.png)
-*Raporlar ve Ekipler modÃ¼llerine Ã¶zel talep oluÅŸturma, onaylama, reddetme ve yetki kaldÄ±rma (revocation) paneli.*
-
----
-
-### 5. YÃ¶netici Paneli & Denetim GÃ¼nlÃ¼kleri (Audit Logs)
-![YÃ¶netici ve Audit Log Paneli](docs/screenshots/05-admin-audit-logs.png)
-*Sistem genelindeki tÃ¼m veri mutasyonlarÄ±nÄ±, onay sÃ¼reÃ§lerini ve kullanÄ±cÄ± hareketlerini kaydeden denetim mekanizmasÄ±.*
-
----
-
-### 6. Ä°nteraktif Raporlama & Analitik Grafikler
-![Raporlama ve Analitik](docs/screenshots/06-reports-analytics.png)
-*Departman daÄŸÄ±lÄ±mlarÄ±, teknoloji trendleri, bÃ¼tÃ§e/durum analizleri ve SVG/Canvas veri gÃ¶rselleÅŸtirmeleri.*
+[✨ Neden ProjectAtlas?](#-neden-projectatlas) •
+[🎯 Öne Çıkan Özellikler](#-öne-çıkan-özellikler) •
+[🏛️ Sistem Mimarisi](#-sistem-mimarisi-clean-architecture--ddd) •
+[🧠 Yerel RAG & AI Hattı](#-yerel-yapay-zekâ--semantik-rag-hattı) •
+[🔒 Güvenlik Mimarisi](#-güvenlik-ve-yetkilendirme-mimarisi) •
+[💻 Teknoloji Yığını](#-teknoloji-yığını) •
+[🚀 Hızlı Başlangıç](#-hızlı-başlangıç-quick-start) •
+[👥 Demo Hesaplar](#-demo-kullanıcı-hesapları--rol-matrisi) •
+[🧪 Testler](#-test--regresyon-güvencesi) •
+[👨‍💻 Geliştirici](#-geliştirici--teşekkür)
 
 </div>
 
 ---
 
-## ğŸ¯ Proje Vizyonu ve AmacÄ±
-
-BÃ¼yÃ¼k Ã¶lÃ§ekli endÃ¼striyel kuruluÅŸlarda (Madencilik, IoT, AÄŸÄ±r Sanayi, Otomasyon) geliÅŸtirilen yazÄ±lÄ±m, yapay zeka, saha teknolojisi ve Ar-Ge projeleri Ã§oÄŸunlukla departman silolarÄ±nda sÄ±kÄ±ÅŸÄ±p kalmaktadÄ±r.
-
-**ProjectAtlas**, kurum genelinde geliÅŸtirilen tÃ¼m inovasyon ve dijitalleÅŸme projelerini tek bir merkezde toplayarak:
-1. **KeÅŸfedilebilirlik:** Teknik bilgisi az olan saha operasyon personelinden Ã¼st dÃ¼zey yÃ¶neticilere kadar herkesin projeleri kolayca incelemesini,
-2. **Yapay Zeka Destekli Bilgi Ã‡Ä±karÄ±mÄ± (RAG):** DoÄŸal dille projeler hakkÄ±nda soru sorulabilmesini ve anlamsal (semantik) arama yapÄ±labilmesini,
-3. **MÃ¼kerrer Efor Ã–nleme:** BaÅŸka bir sahadaki benzer ihtiyacÄ±n daha Ã¶nce nasÄ±l Ã§Ã¶zÃ¼ldÃ¼ÄŸÃ¼nÃ¼ teknoloji ve mimari etiketleriyle gÃ¶rÃ¼nÃ¼r kÄ±lmayÄ±,
-4. **Kurumsal YÃ¶netiÅŸim:** Proje taslaÄŸÄ± oluÅŸturma, yÃ¶netici onayÄ±, modÃ¼l bazlÄ± eriÅŸim kontrolÃ¼ ve denetim loglarÄ±yla tam izlenebilirlik sunmayÄ± saÄŸlar.
+> 📌 **Staj Projesi & Portföy Bildirimi:**  
+> Bu proje, **Demir Export A.Ş. (Koç Holding)** Yazılım Mühendisliği Staj Programı kapsamında kurumsal dijitalleşme ve Ar-Ge hafızasını tek merkezde konsolide etmek amacıyla tasarlanıp hayata geçirilmiştir.  
+> *Bu açık kaynak portföy sürümünde yer alan tüm projeler, organizasyonel birimler, bütçe verileri, personel bilgileri ve teknik dokümanlar **%100 sentetik (mock / fictional)** verilerden oluşmaktadır. Şirket içi canlı sistemlere, gizli kurumsal verilere veya dış kimlik sağlayıcılarına bağlantı içermez.*
 
 ---
 
-## ğŸ›ï¸ Mimari TasarÄ±m & KatmanlÄ± YapÄ± (Clean Architecture)
+## 🌟 Neden ProjectAtlas?
 
-Proje, **Temiz Mimari (Clean Architecture)** ve **Domain-Driven Design (DDD)** ilkeleri gÃ¶zetilerek 4 baÄŸÄ±msÄ±z katmanda inÅŸa edilmiÅŸtir:
+Büyük ölçekli endüstriyel kuruluşlarda (Madencilik, IoT, Ağır Sanayi, Tesis Otomasyonu) geliştirilen yazılım, yapay zekâ, saha teknolojisi ve Ar-Ge projeleri departman silolarında sıkışıp kalmakta; mükerrer yatırımlara ve kurumsal hafıza kaybına yol açmaktadır.
+
+**ProjectAtlas**, kurum genelindeki tüm inovasyon projelerini tek bir merkezde toplayarak:
+- **Kurumsal Hafıza:** Proje detaylarını ve teknik şartnameleri merkezi, filtrelenebilir ve versiyonlanan bir yapıda korur.
+- **Mükerrer Yatırımları Önleme:** Şirket genelindeki benzer saha çözümlerini teknoloji ve mimari etiketleriyle anında görünür kılar.
+- **Yapay Zekâ ile Anında Erişim:** %100 yerel çalışan **BGE-M3 + Qwen 3 RAG** motoruyla yüzlerce sayfalık teknik dokümanları saniyeler içinde doğal dille özetler ve kaynak referanslarıyla yanıtlar.
+- **Sıkı Kurumsal Yönetişim:** Modül bazlı onay iş akışları, SEC-001 izole streaming ve tam denetim izi (audit log) sunar.
+
+---
+
+## ✨ Öne Çıkan Özellikler
+
+| Modül / Özellik | Simge | Detaylı Açıklama |
+| :--- | :---: | :--- |
+| **İnteraktif Proje Vitrini** | 🌐 | Departman, geliştirme durumu, teknoloji yığını, hedef saha ve anahtar kelime kombinasyonlarıyla anlık filtreleme ve kart/liste görünümleri. |
+| **Yerel AI & Semantik RAG** | 🧠 | Kurum içi verileri dışarı sızdırmayan, **1024-Boyutlu BGE-M3 Vektör Embedding** ve **Qwen 3 LLM** destekli soru-cevap asistanı. |
+| **Modül Erişim Yönetimi** | 🛡️ | Raporlar ve Ekipler modüllerine özel talep oluşturma, yönetici onay kuyruğu ve geçmişi koruyan yetki kaldırma (*Historical Revocation*). |
+| **SEC-001 Doküman İzolasyonu** | 🔒 | Teknik şartnameleri `wwwroot` dışı güvenli dizinde saklayan, dizin atlatma (Path Traversal) ve IDOR korumalı streaming indirme motoru. |
+| **Birinci Taraf SVG CAPTCHA** | 🧩 | Harici servis bağımlılığı olmayan, in-memory ve rate-limit korumalı görsel CAPTCHA katmanı ile kaba kuvvet (brute-force) savunması. |
+| **Zengin İstatistik & Raporlama** | 📊 | Departman bazlı bütçe dağılımları, teknoloji trendleri, tamamlanma yüzdeleri ve SVG/Canvas analitik grafikleri. |
+| **Excel Wizard (Import/Export)** | 📑 | Toplu proje verilerini şablon ile içeri aktarma, satır bazlı validasyon ve tek tıkla dışa aktarma (export). |
+| **Çoklu Dil & Tema Sistemi** | 🌍 | Tam kapsamlı Türkçe / İngilizce (i18n) dil desteği ve dinamik HSL renk değişkenli Açık / Koyu (Dark Mode) temaları. |
+| **Tam Denetim İzi (Audit Log)** | 📜 | Sistemdeki tüm onay, güncelleme, erişim ve durum değişikliklerini kullanıcı ve IP damgasıyla kaydeden log motoru. |
+
+---
+
+## 🏛️ Sistem Mimarisi (Clean Architecture & DDD)
+
+Proje, **Clean Architecture**, **Domain-Driven Design (DDD)** ve **CQRS** prensiplerine uygun olarak 4 temel katmanda inşa edilmiştir:
 
 ```
 ProjectAtlas/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ DeUygulamaVitrini.Domain/          # Saf iÅŸ kurallarÄ±, VarlÄ±klar, Enum'lar, Sabitler
-â”‚   â”‚   â”œâ”€â”€ DeUygulamaVitrini.Application/     # CQRS/Use-Case servisleri, DTO'lar, ArayÃ¼zler, Excel/Import
-â”‚   â”‚   â”œâ”€â”€ DeUygulamaVitrini.Infrastructure/  # EF Core 10, SQL Server, Local AI Provider, GÃ¼venlik
-â”‚   â”‚   â””â”€â”€ DeUygulamaVitrini.API/             # REST Controller'lar, Rate Limiter, Middleware'ler
-â”‚   â””â”€â”€ tests/
-â”‚       â”œâ”€â”€ DeUygulamaVitrini.SecurityTests/   # SEC-001 Yetki ve GÃ¼venlik Regresyon Testleri
-â”‚       â”œâ”€â”€ DeUygulamaVitrini.AiTests/         # RAG, Embedding ve Warm-Up Testleri
-â”‚       â”œâ”€â”€ DeUygulamaVitrini.ExcelTests/      # Toplu Ä°Ã§e/DÄ±ÅŸa AktarÄ±m DoÄŸrulama Testleri
-â”‚       â””â”€â”€ DeUygulamaVitrini.CaptchaTests/    # Birinci Taraf SVG CAPTCHA Testleri
-â””â”€â”€ frontend/                                  # React 19 + TypeScript Single Page Application (SPA)
-    â”œâ”€â”€ src/
-    â”‚   â”œâ”€â”€ components/                        # UI TasarÄ±m Sistemi (Cards, Modals, Forms, Charts)
-    â”‚   â”œâ”€â”€ context/                           # Auth, ModuleAccess, Theme, Accessibility Context'leri
-    â”‚   â”œâ”€â”€ pages/                             # Sayfa BileÅŸenleri (Vitrin, EditÃ¶r, Admin, Raporlar)
-    â”‚   â”œâ”€â”€ services/                          # Axios API Ä°stemcisi & Servis KatmanÄ±
-    â”‚   â”œâ”€â”€ styles/                            # CSS DeÄŸiÅŸkenleri, Semantic Token'lar, Light/Dark Temalar
-    â”‚   â””â”€â”€ i18n/                              # TÃ¼rkÃ§e / Ä°ngilizce Dil KaynaklarÄ±
-    â””â”€â”€ vite.config.ts
+├── backend/
+│   ├── src/
+│   │   ├── DeUygulamaVitrini.Domain/          # Saf iş kuralları, Varlıklar (Entities), Enum'lar, Değer Nesneleri
+│   │   ├── DeUygulamaVitrini.Application/     # Use-Case servisleri, DTO'lar, Arayüzler, Excel Motoru, CQRS
+│   │   ├── DeUygulamaVitrini.Infrastructure/  # EF Core 10, SQL Server, Local AI Provider, SEC-001 İzolasyonu
+│   │   └── DeUygulamaVitrini.API/             # ASP.NET Core 10 Web API, Middleware'ler, CAPTCHA, Rate Limiter
+│   └── tests/
+│       ├── DeUygulamaVitrini.SecurityTests/   # SEC-001 Yetkilendirme & IDOR Regresyon Testleri
+│       ├── DeUygulamaVitrini.AiTests/         # RAG, Embedding & Warm-Up Entegrasyon Testleri
+│       ├── DeUygulamaVitrini.ExcelTests/      # Excel Şablon ve Toplu İçe Aktarım Testleri
+│       └── DeUygulamaVitrini.CaptchaTests/    # 1st-Party SVG CAPTCHA Doğrulama Testleri
+└── frontend/                                  # React 19 + TypeScript 5 Single Page Application (SPA)
+    └── src/
+        ├── components/                        # UI Tasarım Sistemi (Cards, Modals, Forms, Charts)
+        ├── context/                           # Auth, ModuleAccess, Theme, Accessibility Context'leri
+        ├── pages/                             # Sayfa Bileşenleri (Vitrin, Editör, Admin, Raporlar)
+        ├── services/                          # Axios API İstemcisi & Tip Tanımlı Servis Katmanı
+        ├── styles/                            # Vanilla CSS Tokens, Glassmorphism, Dark/Light Temalar
+        └── i18n/                              # Türkçe / İngilizce Çift Dil Sözlüğü
+```
+
+### Katman Bağımlılık Şeması
+
+```mermaid
+graph TD
+    API["🌐 DeUygulamaVitrini.API<br/>(Controllers, RateLimit, Middleware, Captcha)"]
+    INFRA["🔧 DeUygulamaVitrini.Infrastructure<br/>(EF Core 10, Local AI Provider, FileStorage, Identity)"]
+    APP["⚙️ DeUygulamaVitrini.Application<br/>(Use Cases, DTOs, Interfaces, Business Logic, Excel)"]
+    DOM["💎 DeUygulamaVitrini.Domain<br/>(Entities, Value Objects, Enums, Domain Rules)"]
+
+    API --> APP
+    API --> INFRA
+    INFRA --> APP
+    INFRA --> DOM
+    APP --> DOM
+
+    style DOM fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
+    style APP fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style INFRA fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
+    style API fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
 ```
 
 ---
 
-## ğŸ”’ GÃ¼venlik & Yetkilendirme Mimarisi
+## 🧠 Yerel Yapay Zekâ & Semantik RAG Hattı
 
-ProjectAtlas, kurumsal gÃ¼venlik standartlarÄ±na uygun olarak tasarlanmÄ±ÅŸtÄ±r:
+ProjectAtlas, harici bulut API'lerine şirket verisi sızdırmadan çalışan **%100 yerel yapay zekâ** mimarisine sahiptir:
 
-### 1. Kimlik DoÄŸrulama & Oturum YÃ¶netimi
-- **ASP.NET Core Identity** altyapÄ±sÄ± ile gÃ¼venli parola hash'leme (PBKDF2).
-- **HTTP-Only, Secure, SameSite=Lax Cookie (`.DemirExport.Auth`)** oturum yÃ¶netimi.
-- Frontend'e kesinlikle hassas token sÄ±zdÄ±rÄ±lmaz; tÃ¼m API istekleri `withCredentials: true` ile taÅŸÄ±nÄ±r.
-- REST API uyumlu `OnRedirectToLogin` $\rightarrow$ `401 Unauthorized` ve `OnRedirectToAccessDenied` $\rightarrow$ `403 Forbidden` JSON yanÄ±t mimarisi.
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as 👤 Kullanıcı
+    participant UI as 💻 React 19 UI
+    participant API as 🚀 ASP.NET Core API
+    participant Emb as 🧮 Yerel BGE-M3 (1024-dim)
+    participant DB as 🗄️ MSSQL Vektör / Tablo
+    participant LLM as 🤖 Yerel Qwen 3 LLM
 
-### 2. Ã‡ok Kademeli Rol & Yetki Sistemi (RBAC)
-- **SuperAdmin:** TÃ¼m sistem konfigÃ¼rasyonu, kullanÄ±cÄ± yÃ¶netimi, onay sÃ¼reÃ§leri ve modÃ¼l atama yetkisi.
-- **Admin:** Proje onaylama/reddetme, organizasyon birimlerini yÃ¶netme, raporlama ve eriÅŸim taleplerini deÄŸerlendirme.
-- **Project Creator (`CanCreateProjects = true`):** Yeni proje oluÅŸturma, kendi taslaklarÄ±nÄ± dÃ¼zenleme ve onaya sunma.
-- **Standard User (Viewer):** YalnÄ±zca onaylanmÄ±ÅŸ ve yayÄ±ndaki projeleri gÃ¶rÃ¼ntÃ¼leme, AI asistanÄ±nÄ± kullanma, yetkili olmadÄ±ÄŸÄ± modÃ¼ller iÃ§in eriÅŸim talebi oluÅŸturma.
+    User->>UI: "Madencilik sahalarında IoT tabanlı proje var mı?"
+    UI->>API: POST /api/ai/project-assistant/query
+    API->>Emb: Metin Vektörleştirme (Embedding Request)
+    Emb-->>API: 1024-Boyutlu Sayısal Vektör
+    API->>DB: Kosinüs Benzerliği ile İlgili Chunk'ları Getir
+    DB-->>API: En Alakalı Proje Metin Parçaları (Top-K Chunks)
+    API->>LLM: Sistem Promptu + Proje Bağlamı + Kullanıcı Sorusu
+    LLM-->>API: Doğrulanmış, Kaynak Referanslı Yanıt
+    API-->>UI: Yapılandırılmış JSON (Yanıt + Referans Proje ID'leri)
+    UI-->>User: Akıllı Asistan Yanıtı ve İlgili Proje Kartları
+```
 
-### 3. ModÃ¼l Seviyesinde EriÅŸim KontrolÃ¼ & Talep Ä°ÅŸ AkÄ±ÅŸÄ±
-- **Raporlama (`reports`)** ve **Ekipler (`teams`)** modÃ¼lleri hassas operasyonel veriler iÃ§erdiÄŸi iÃ§in kilitlenebilir.
-- Yetkisi olmayan kullanÄ±cÄ± girdiÄŸinde ÅŸÄ±k bir eriÅŸim talep modalÄ± aÃ§Ä±lÄ±r; girilen gerekÃ§e yÃ¶neticinin onay kuyruÄŸuna dÃ¼ÅŸer.
-- YÃ¶neticiler tek tÄ±kla onaylayabilir, gerekÃ§eli reddedebilir veya verilen yetkiyi geÃ§miÅŸi koruyarak geri alabilir (`Revocation`).
-
-### 4. SertleÅŸtirilmiÅŸ Ã–zel DokÃ¼man GÃ¼venliÄŸi (SEC-001)
-- Projeye eklenen teknik ÅŸartname, mimari rapor gibi Ã¶zel dokÃ¼manlar **`wwwroot` dÄ±ÅŸÄ±na (`App_Data/uploads/`)** izole edilmiÅŸtir.
-- Statik dosya URL'leri Ã¼zerinden anonim eriÅŸim tamamen engellenmiÅŸtir.
-- DokÃ¼manlar yalnÄ±zca yetkisi doÄŸrulanmÄ±ÅŸ kullanÄ±cÄ±lara Ã¶zel streaming endpoint'i (`GET /api/projects/{id}/documents/{docId}/download`) Ã¼zerinden gÃ¼venli baÅŸlÄ±klarla (`X-Content-Type-Options: nosniff`, `Content-Disposition: attachment`) sunulur.
-- Dizin geÃ§iÅŸi (Path Traversal - `../../`) saldÄ±rÄ±larÄ±na karÅŸÄ± mutlak dosya yolu denetimi uygulanÄ±r.
-
-### 5. Birinci Taraf SVG CAPTCHA SavunmasÄ±
-- ÃœÃ§Ã¼ncÃ¼ parti takipÃ§i veya harici servis baÄŸÄ±mlÄ±lÄ±ÄŸÄ± olmayan, in-memory ve rate-limit korumalÄ± gÃ¶rsel SVG CAPTCHA katmanÄ±.
-- Brute-force oturum aÃ§ma giriÅŸimlerine karÅŸÄ± endpoint seviyesinde koruma saÄŸlar.
+- **Hibrit Arama (Lexical + Semantic):** Başlık, özet ve teknik etiketler üzerinden hem tam metin (LIKE) hem de vektörel anlamsal (cosine similarity) skorlama.
+- **Arkaplan Mutabakat Servisi (`SemanticIndexReconciliationWorker`):** Yeni eklenen veya düzenlenen projelerin vektör embedding'lerini arka planda asenkron senkronize eder.
+- **Soğuk Başlangıç Isınma Servisi (`AiWarmupHostedService`):** Sunucu ayağa kalktığında yapay zekâ modelini önceden ısıtarak ilk sorgudaki gecikmeyi (cold-start) ortadan kaldırır.
+- **Zarif Geri Çekilme (Graceful Fallback):** Yerel AI sunucusuna erişilemediğinde sistem çökmez; klasik arama moduna kesintisiz devam eder.
 
 ---
 
-## ğŸ§  Yerel Yapay Zeka & RAG (Retrieval-Augmented Generation)
+## 🔒 Güvenlik ve Yetkilendirme Mimarisi
 
-ProjectAtlas, harici bulut API'lerine ÅŸirket verisi sÄ±zdÄ±rmadan Ã§alÄ±ÅŸabilecek **%100 yerel yapay zeka** entegrasyonuna sahiptir:
+ProjectAtlas, kurumsal güvenlik standartlarına uygun olarak **Savunma Derinliği (Defense-in-Depth)** prensibiyle tasarlanmıştır:
 
-```
-[KullanÄ±cÄ± DoÄŸal Dil Sorgusu]
-              â”‚
-              â–¼
-[Yerel BGE-M3 Embedding Modeli (1024 Boyut)]
-              â”‚
-              â–¼ (KosinÃ¼s BenzerliÄŸi / VektÃ¶r Arama)
-[MSSQL ProjectKnowledgeChunks VektÃ¶r Ä°ndeksi]
-              â”‚
-              â–¼ (Ä°lgili Proje BaÄŸlamÄ± + Sistem Promptu)
-[Yerel Qwen 3 LLM Ã‡Ä±karÄ±m Motoru]
-              â”‚
-              â–¼
-[Kaynak Proje ReferanslÄ± AkÄ±llÄ± YanÄ±t]
+```mermaid
+flowchart LR
+    Client["🌐 İstemci (Browser)"] -->|Cookie + SameSite=Lax| RateLimit["🛡️ Rate Limiting & CAPTCHA"]
+    RateLimit --> AuthN["🔑 ASP.NET Identity (PBKDF2)"]
+    AuthN --> AuthZ["📋 RBAC + Modül Yetki Motoru"]
+    AuthZ --> SEC001["📁 SEC-001 İzole Doküman Streaming"]
+    SEC001 --> Storage["🔒 App_Data/uploads (Non-wwwroot)"]
 ```
 
-- **Hibrit Arama:** BaÅŸlÄ±k, Ã¶zet ve teknik etiketler Ã¼zerinden hem tam metin (lexical) hem de vektÃ¶rel anlamsal (semantic) benzerlik skorlamasÄ±.
-- **Otomatik Ä°ndeks MutabakatÄ± (Reconciliation Background Worker):** Arka planda Ã§alÄ±ÅŸan hosted service, yeni eklenen veya gÃ¼ncellenen projelerin vektÃ¶r indeksini otomatik olarak senkronize eder.
-- **Cold-Start Warmup Servisi:** Sunucu aÃ§Ä±lÄ±ÅŸÄ±nda AI modelini Ã¶nceden Ä±sÄ±tarak ilk sorgudaki gecikmeyi (cold-start latency) ortadan kaldÄ±rÄ±r.
-- **Zarif Geri Ã‡ekilme (Graceful Fallback):** Yerel AI sunucusu kapalÄ± olsa dahi uygulama kesinlikle Ã§Ã¶kmez; klasik filtreleme ve arama moduna kesintisiz devam eder.
+### 1. Kimlik Doğrulama & Oturum Yönetimi
+- **ASP.NET Core Identity** altyapısı ile güvenli parola hash'leme (PBKDF2).
+- **HTTP-Only, Secure, SameSite=Lax Cookie (`.DemirExport.Auth`)** oturum yönetimi.
+- Frontend'e kesinlikle hassas token sızdırılmaz; tüm API istekleri `withCredentials: true` ile taşınır.
+- REST API uyumlu `401 Unauthorized` ve `403 Forbidden` JSON hata sözleşmesi.
+
+### 2. Sertleştirilmiş Özel Doküman Güvenliği (SEC-001)
+- Projeye eklenen teknik şartname ve mimari raporlar kesinlikle **`wwwroot` dışına (`App_Data/uploads/`)** izole edilmiştir.
+- Statik dosya URL'leri üzerinden anonim indirme tamamen engellenmiştir.
+- Dokümanlar yalnızca yetkisi doğrulanmış kullanıcılara özel streaming endpoint'i (`GET /api/projects/{id}/documents/{docId}/download`) üzerinden güvenli başlıklarla (`X-Content-Type-Options: nosniff`, `Content-Disposition: attachment`) sunulur.
+- **Dizin geçişi (Path Traversal - `../../`)** ve **IDOR** girişimlerine karşı mutlak dosya yolu denetimi uygulanır.
+
+### 3. Birinci Taraf SVG CAPTCHA Savunması
+- Üçüncü parti takipçi veya harici servis bağımlılığı olmayan, in-memory ve rate-limit korumalı görsel SVG CAPTCHA katmanı.
+- Brute-force oturum açma girişimlerine karşı endpoint seviyesinde koruma sağlar.
 
 ---
 
-## ğŸ’» Teknoloji YÄ±ÄŸÄ±nÄ±
+## 💻 Teknoloji Yığını
 
-| Katman | Teknoloji / KÃ¼tÃ¼phane | AÃ§Ä±klama |
+| Katman | Teknoloji / Kütüphane | Kullanım Amacı |
 | :--- | :--- | :--- |
-| **Backend Framework** | ASP.NET Core 10 Web API | YÃ¼ksek performanslÄ±, modern C# 13 RESTful mimari |
-| **ORM & VeritabanÄ±** | EF Core 10 + Microsoft SQL Server | Split Queries, Global Soft-Delete filtreleri, Ä°ndekslemeler |
-| **Kimlik & GÃ¼venlik** | ASP.NET Core Identity | Cookie Auth, PBKDF2 Hashing, Memory Rate Limiter |
-| **Yapay Zeka / LLM** | BGE-M3 + Qwen 3 (OpenAI Compatible) | 1024-dim yerel vektÃ¶r embedding ve RAG soru-cevap |
-| **Frontend Framework** | React 19 + TypeScript 5 | Tip gÃ¼venli, bileÅŸen tabanlÄ± modern SPA |
-| **Build & Tooling** | Vite 8 + Rollup | Milisaniyeler mertebesinde HMR ve optimize Ã¼retim derlemesi |
-| **Durum YÃ¶netimi** | TanStack Query v5 (React Query) | Sunucu durumu Ã¶nbellekleme, arkaplan senkronizasyonu |
-| **YÃ¶nlendirme & Ä°konlar** | React Router v7 + Lucide React | GÃ¼venli rota koruyucularÄ± (ProtectedRoute), modern SVG ikonlar |
-| **UluslararasÄ±laÅŸtÄ±rma** | i18next + react-i18next | Tam kapsamlÄ± TÃ¼rkÃ§e / Ä°ngilizce dil desteÄŸi |
-| **TasarÄ±m & Tema** | Vanilla CSS Tokens | Glassmorphism, HSL renk paletleri, Dinamik AÃ§Ä±k/Koyu Tema |
+| **Backend Framework** | ASP.NET Core 10 Web API | Yüksek performanslı RESTful servis mimarisi (C# 13) |
+| **ORM & Veritabanı** | EF Core 10 + Microsoft SQL Server 2022 | Split Queries, Global Soft-Delete filtreleri, İndekslemeler |
+| **Kimlik & Güvenlik** | ASP.NET Core Identity | Cookie Auth, PBKDF2 Hashing, In-Memory Rate Limiter |
+| **Yapay Zekâ / LLM** | BGE-M3 + Qwen 3 (OpenAI Compatible) | 1024-dim yerel vektör embedding ve RAG soru-cevap |
+| **Excel Motoru** | ClosedXML / OpenXml | Şablonlu Excel içe/dışa aktarım ve toplu veri işleme |
+| **Frontend Framework** | React 19 + TypeScript 5 | Tip güvenli, bileşen tabanlı modern SPA |
+| **Build & Tooling** | Vite 8 + Rollup | Milisaniyeler mertebesinde HMR ve optimize üretim derlemesi |
+| **Durum Yönetimi** | TanStack Query v5 (React Query) | Sunucu durumu önbellekleme, arkaplan senkronizasyonu |
+| **Yönlendirme & İkonlar** | React Router v7 + Lucide React | Güvenli rota koruyucuları (ProtectedRoute), modern SVG ikonlar |
+| **Uluslararasılaştırma** | i18next + react-i18next | Tam kapsamlı Türkçe / İngilizce dil desteği |
+| **Tasarım & Tema** | Vanilla CSS Tokens | Glassmorphism, HSL renk paletleri, Dinamik Açık/Koyu Tema |
 
 ---
 
-## ğŸš€ HÄ±zlÄ± BaÅŸlangÄ±Ã§ (Quick Start)
+## 🚀 Hızlı Başlangıç (Quick Start)
 
-### Gereksinimler
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+### Ön Gereksinimler
+- [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Node.js (v20+)](https://nodejs.org/) & `npm`
-- [Microsoft SQL Server](https://www.microsoft.com/sql-server) veya [SQL Server LocalDB](https://learn.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb) ya da [Docker Desktop](https://www.docker.com/)
+- [Docker Desktop](https://www.docker.com/) veya [SQL Server LocalDB](https://learn.microsoft.com/sql/database-engine/configure-windows/sql-server-express-localdb)
 
 ---
 
-### AdÄ±m 1: VeritabanÄ±nÄ± BaÅŸlatÄ±n
-
-Proje kÃ¶k dizininde yer alan `docker-compose.yml` ile tek komutla SQL Server baÅŸlatabilirsiniz:
-
+### Adım 1: Depoyu Klonlayın
 ```bash
-# SQL Server 2022 Konteynerini BaÅŸlatÄ±n
+git clone https://github.com/ismaildundar42/project-atlas-internship.git
+cd ProjectAtlas-Portfolio
+```
+
+---
+
+### Adım 2: Veritabanını Başlatın (Docker)
+```bash
+# SQL Server 2022 Konteynerini Arka Planda Başlatın
 docker-compose up -d
 ```
-
-*(Alternatif olarak Visual Studio ile gelen `(localdb)\mssqllocaldb` doÄŸrudan kullanÄ±labilir; `appsettings.Development.json` varsayÄ±lan olarak LocalDB'ye ayarlÄ±dÄ±r).*
+*(Alternatif olarak Windows ortamında `(localdb)\mssqllocaldb` doğrudan kullanılabilir; `appsettings.Development.json` varsayılan olarak LocalDB ile uyumludur).*
 
 ---
 
-### AdÄ±m 2: Backend API'yi Ã‡alÄ±ÅŸtÄ±rÄ±n
-
+### Adım 3: Backend API'yi Çalıştırın
 ```bash
 cd backend/src/DeUygulamaVitrini.API
 
-# BaÄŸÄ±mlÄ±lÄ±klarÄ± derleyin ve API'yi baÅŸlatÄ±n
-# (Ä°lk aÃ§Ä±lÄ±ÅŸta 20 zengin sentetik proje ve referans veriler otomatik tohumlanÄ±r)
+# Bağımlılıkları yükleyin ve API'yi başlatın
+# (İlk açılışta 20 zengin sentetik proje ve yetki şeması otomatik tohumlanır)
 dotnet run
 ```
-
-- API Adresi: `http://localhost:5000`
-- Swagger OpenAPI ArayÃ¼zÃ¼: `http://localhost:5000/swagger`
+- 📍 **API Adresi:** `http://localhost:5000`
+- 📖 **Swagger OpenAPI Arayüzü:** `http://localhost:5000/swagger`
 
 ---
 
-### AdÄ±m 3: Frontend UygulamasÄ±nÄ± Ã‡alÄ±ÅŸtÄ±rÄ±n
-
+### Adım 4: Frontend Uygulamasını Çalıştırın
 ```bash
 cd frontend
 
-# BaÄŸÄ±mlÄ±lÄ±klarÄ± yÃ¼kleyin
+# Bağımlılıkları yükleyin
 npm install
 
-# GeliÅŸtirme sunucusunu baÅŸlatÄ±n
+# Geliştirme sunucusunu ayağa kaldırın
 npm run dev
 ```
-
-- Web ArayÃ¼zÃ¼: `http://localhost:5173`
+- 🌐 **Web Arayüzü:** `http://localhost:5173`
 
 ---
 
-## ğŸ‘¥ Ã–nceden TanÄ±mlÄ± Demo KullanÄ±cÄ± HesaplarÄ±
+## 👥 Demo Kullanıcı Hesapları & Rol Matrisi
 
-GeliÅŸtirme ortamÄ±nda veritabanÄ± ilk kez oluÅŸtuÄŸunda aÅŸaÄŸÄ±daki roller ve kullanÄ±cÄ±lar otomatik olarak hazÄ±rlanÄ±r:
+Geliştirme ortamında test yapabilmeniz için hazır tohumlanmış hesaplar:
 
-| E-posta | Parola | Rol | Yetki KapsamÄ± |
+| E-posta | Parola | Rol | Yetki Kapsamı |
 | :--- | :--- | :--- | :--- |
-| `admin@demirexport.com` | `AdminPassword123!` | **SuperAdmin** | Sistem genelinde tam yetki, onaylama, kullanÄ±cÄ± ve yetki yÃ¶netimi |
-| `creator@demirexport.com` | `CreatorPassword123!` | **Proje GiriÅŸi** | Yeni proje taslaÄŸÄ± oluÅŸturma, kendi projelerini dÃ¼zenleme ve onaya sunma |
-| `user@demirexport.com` | `UserPassword123!` | **Standart KullanÄ±cÄ±** | YayÄ±ndaki projeleri inceleme, AI asistanÄ±nÄ± kullanma, modÃ¼l eriÅŸim talebi iletme |
-| `readonly@demirexport.com` | `ReadOnlyPassword123!` | **Salt Okunur** | Temel vitrin inceleme yetkisi |
+| `admin@demirexport.com` | `AdminPassword123!` | 👑 **SuperAdmin** | Sistem genelinde tam yetki, proje onay/ret, kullanıcı ve modül erişim yönetimi |
+| `creator@demirexport.com` | `CreatorPassword123!` | ✍️ **Proje Girişi** | Yeni proje taslağı oluşturma, kendi projelerini düzenleme ve onaya sunma |
+| `user@demirexport.com` | `UserPassword123!` | 🔍 **Standart Kullanıcı** | Yayındaki projeleri inceleme, AI asistanını kullanma, modül erişim talebi iletme |
+| `readonly@demirexport.com` | `ReadOnlyPassword123!` | 👁️ **Salt Okunur** | Temel vitrin görüntüleme yetkisi |
 
-*(GiriÅŸ ekranÄ±nda gÃ¼venli gÃ¶rsel CAPTCHA doÄŸrulamasÄ± aktiftir).*
+> ℹ️ *Giriş ekranında güvenli birinci taraf SVG CAPTCHA doğrulaması aktiftir.*
 
 ---
 
-## ğŸ§ª GÃ¼venlik ve Regresyon Testleri
+## 🧪 Test & Regresyon Güvencesi
 
-Proje, kritik gÃ¼venlik ve iÅŸ kurallarÄ±nÄ± denetleyen otomatik test paketlerine sahiptir:
+Proje, kritik güvenlik, AI ve iş akışı senaryolarını denetleyen otomatik test paketlerine sahiptir:
 
 ```bash
-# SEC-001 GÃ¼venlik Testlerini Ã‡alÄ±ÅŸtÄ±rÄ±n (Ä°zole InMemory VeritabanÄ±)
+# Tüm Test Paketlerini Çalıştırın
+dotnet test backend/DeUygulamaVitrini.sln
+
+# Özellikle SEC-001 Güvenlik ve İzolasyon Testlerini Çalıştırın
 dotnet test backend/tests/DeUygulamaVitrini.SecurityTests
 ```
 
-**Test KapsamÄ± (25/25 BaÅŸarÄ±lÄ±):**
--  Anonim ve yetkisiz kullanÄ±cÄ±larÄ±n taslak projelere ve dokÃ¼manlara eriÅŸiminin engellenmesi (401/403).
--  Proje sahibi ve Admin kullanÄ±cÄ±larÄ±n taslak dokÃ¼manlara yetkili streaming eriÅŸimi (200 OK).
--  Dizin atlatma (Path Traversal: `../../../appsettings.json`) giriÅŸimlerinin engellenmesi.
--  MIME tipi ve `X-Content-Type-Options: nosniff` baÅŸlÄ±k doÄŸrulamalarÄ±.
--  Yetkisiz IDOR (farklÄ± projeye ait dokÃ¼man ID'si ile Ã§aÄŸÄ±rma) korumasÄ± (404 NotFound).
+### Test Kapsamı:
+- ✅ **SEC-001 Yetki Denetimi:** Anonim ve yetkisiz kullanıcıların taslak projelere ve dokümanlara erişiminin engellenmesi (`401` / `403`).
+- ✅ **Path Traversal Savunması:** `../../` formatındaki dizin atlatma ve dosya sızdırma girişimlerinin tespiti.
+- ✅ **IDOR Koruması:** Farklı projelere ait doküman ID'si ile yapılan yetkisiz indirme taleplerinin engellenmesi (`404 NotFound`).
+- ✅ **Streaming Başlıkları:** `X-Content-Type-Options: nosniff` ve `Content-Disposition` akış doğrulamaları.
+- ✅ **CAPTCHA & Rate Limit:** Oturum açma isteklerinde brute-force saldırı bariyeri kontrolleri.
 
 ---
 
-## ğŸ–¼ï¸ Ekran GÃ¶rÃ¼ntÃ¼leri Ekleme Rehberi (GeliÅŸtirici Notu)
+## 👨‍💻 Geliştirici & Teşekkür
 
-README dosyasÄ±ndaki gÃ¶rsel yerleÅŸimlerini tamamlamak iÃ§in tarayÄ±cÄ±nÄ±zda uygulamayÄ± Ã§alÄ±ÅŸtÄ±rÄ±p aÅŸaÄŸÄ±daki ekran gÃ¶rÃ¼ntÃ¼lerini alarak `docs/screenshots/` klasÃ¶rÃ¼ne aynÄ± isimlerle kaydedebilirsiniz:
+<div align="center">
 
-1. `01-homepage-showcase.png` $\rightarrow$ Ana sayfa filtreler ve proje kartlarÄ± vitrini.
-2. `02-project-detail-ai.png` $\rightarrow$ Herhangi bir projenin detay sayfasÄ± ve saÄŸ altta aÃ§Ä±k olan AI Proje AsistanÄ± penceresi.
-3. `03-project-editor.png` $\rightarrow$ `/admin/projects/new` veya dÃ¼zenleme ekranÄ±ndaki Ã§ok sekmeli form arayÃ¼zÃ¼.
-4. `04-module-access-requests.png` $\rightarrow$ `/admin/module-access` yetki onaylama ve talep listesi ekranÄ±.
-5. `05-admin-audit-logs.png` $\rightarrow$ `/admin/audit-logs` iÅŸlem geÃ§miÅŸi ve denetim kayÄ±tlarÄ± tablosu.
-6. `06-reports-analytics.png` $\rightarrow$ `/reports` sayfasÄ±ndaki grafikler, donut chart ve daÄŸÄ±lÄ±m istatistikleri.
+**Geliştirici:** İsmail Dündar  
+**Kurum:** Demir Export A.Ş. — Koç Holding  
+**Program:** Yazılım Mühendisliği Staj Programı  
 
----
+<br />
 
-## ğŸ‘¨â€ğŸ’» GeliÅŸtirici & TeÅŸekkÃ¼r
+*Demir Export Ar-Ge ve Dijital Dönüşüm ekibine staj sürecindeki destek, vizyon ve rehberlikleri için teşekkür ederim.*
 
-- **GeliÅŸtirici:** Ä°smail DÃ¼ndar
-- **Kurum:** Demir Export A.Å. â€” KoÃ§ Holding
-- **Program:** YazÄ±lÄ±m MÃ¼hendisliÄŸi Staj ProgramÄ±
+<br />
 
-*Demir Export Ar-Ge ve Dijital DÃ¶nÃ¼ÅŸÃ¼m ekibine staj sÃ¼recindeki destek ve rehberlikleri iÃ§in teÅŸekkÃ¼r ederim.*
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/ismaildundar42)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com)
+
+</div>
